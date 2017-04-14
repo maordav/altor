@@ -1,12 +1,16 @@
-// load the things we need
 var mongoose = require('mongoose');
 var PassportUtils = require('../config/passport-utils');
 
-// define the schema for our user model
-var userSchema = new mongoose.Schema({
-    email: String,
-    password: String
-},  // Defining the user's role as the discriminator
+var userSchema = new mongoose.Schema(
+    {
+        full_name: { type: String, required: true, trim: true },
+        firstName: String,
+        lastName: String,
+        email: { type: String, required: true, trim: true },
+        password: { type: String, required: true },
+        phone: { type: String, trim: true },
+        mesaages: [require('../models/schemes/message')]
+    },
     { discriminatorKey: 'role' });
 
 // generating a hash
