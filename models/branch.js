@@ -4,7 +4,11 @@ var branchSchema = mongoose.Schema(
     {
         //network: ObjectId //TODO altor+
         name: { type: String, required: true, trim: true },
+<<<<<<< HEAD
+        managers: [{ type: [ObjectId], required: true }],
+=======
         managers: [{ type: [mongoose.Schema.Types.ObjectId], required: true }],
+>>>>>>> refs/remotes/origin/DB_Creation
         email: { type: String, required: true, trim: true },
         categories: [String],
         phone: { type: String },
@@ -17,7 +21,11 @@ var branchSchema = mongoose.Schema(
             number: Number
         },
         //queues: [require('../models/queue')], //TODO altor+
+<<<<<<< HEAD
+        employees: [ObjectId],
+=======
         employees: [mongoose.Schema.Types.ObjectId],
+>>>>>>> refs/remotes/origin/DB_Creation
         shifts: [require('../models/schemes/shift')],
         messages: [require('../models/schemes/message')],
         services: [require('../models/schemes/service')],
