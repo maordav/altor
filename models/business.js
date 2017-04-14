@@ -3,7 +3,7 @@ var user = require('./user');
 
 // Define client as a discriminator of user
 var businessSchema = user.discriminator('business', mongoose.Schema({
-    business: [mongoose.Schema.Types.ObjectId]
+    business: [ObjectId]
 }));
 
 // create the model for users and expose it to our app

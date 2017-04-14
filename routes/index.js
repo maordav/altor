@@ -1,6 +1,6 @@
 module.exports = function (router, passport)
 {
-    var Messages = require('../models/schemes/message');
+    var Messages = require('../models/message');
 
     /* GET home page. */
     router.get('/index', function (req, res, next)
