@@ -5,7 +5,7 @@ var clientSchema = User.discriminator('employee', new mongoose.Schema(
     {
         // TODO validate if service is within the business services
         services: [require('../models/schemes/service')],
-        branches: [ObjectId],
+        branches: [mongoose.Schema.Types.ObjectId],
         days:
         [{
             is_working_today: Boolean,
@@ -19,7 +19,7 @@ var clientSchema = User.discriminator('employee', new mongoose.Schema(
 
             appointments:
             [{
-                client: Objectid,
+                client: mongoose.Schema.Types.ObjectId,
                 start_time: Date,
                 service: {
                     type: require('../models/service'),
