@@ -6,14 +6,14 @@ var clientSchema = User.discriminator('client', new mongoose.Schema(
     {
         appointments_paths:
         [{
-            branch: ObjectId,
-            employee: ObjectId,
-            appointment: ObjectId
+            branch: mongoose.Schema.Types.ObjectId,
+            employee: mongoose.Schema.Types.ObjectId,
+            appointment: mongoose.Schema.Types.ObjectId
         }],
         queue_paths:
         [{
-            branch: ObjectId,
-            queue: ObjectId
+            branch: mongoose.Schema.Types.ObjectId,
+            queue: mongoose.Schema.Types.ObjectId
         }]
     }));
 

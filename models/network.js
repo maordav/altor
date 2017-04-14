@@ -3,7 +3,7 @@
 var networkSchema = mongoose.Schema(
     {
         name: { type: String, required: true, trim: true },
-        managers: [ObjectId],
+        managers: [mongoose.Schema.Types.ObjectId],
         email: { type: String, required: true, trim: true },
         categories: [String],
         logo_path: { type: String },
@@ -15,7 +15,7 @@ var networkSchema = mongoose.Schema(
             number: Number
         },
         messages: [require('../models/schemes/message')],
-        branches: [ObjectId]
+        branches: [mongoose.Schema.Types.ObjectId]
     });
 
 module.exports = networkSchema;

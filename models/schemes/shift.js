@@ -3,7 +3,7 @@
 var shiftSchema = mongoose.Schema(
     {
         duration: Number,
-        working_employees: [ObjectId]
+        working_employees: [mongoose.Schema.Types.ObjectId]
     });
 
 module.exports = shiftSchema;
