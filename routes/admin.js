@@ -1,7 +1,7 @@
 module.exports = function (router, passport)
 {
     var User = require('../models/user');
-    var Messages = require('../models/message');
+    var Messages = require('../models/schemes/message');
 
     router.get('/del-user', function (req, res)
     {
